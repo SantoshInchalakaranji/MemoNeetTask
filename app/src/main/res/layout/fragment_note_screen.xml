@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.capsule.NoteScreenFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:src="@drawable/blood"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/segeo_regular"
+        android:text="Blood vessel, a vessel in the human or animal body in which blood circulates. The vessels that carry blood away from the heart are called arteries, and their very small branches are arterioles. It is through the capillaries that nutrients and wastes are exchanged between the blood and body tissues."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Up Next:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/bottom_card"
+        app:layout_constraintStart_toStartOf="@+id/bottom_card" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/ncert_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz Test"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/segeo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Questions: 10"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/ncert_tv"
+                app:layout_constraintTop_toBottomOf="@id/ncert_tv" />
+
+
+            <ImageView
+                android:id="@+id/arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/record_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ncert_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
